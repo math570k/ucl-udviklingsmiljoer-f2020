@@ -33,17 +33,12 @@ router.get("/:id", async function (req, res, next) {
 ================================================= */
 router.post("/", async function (req, res, next) {
   try {
-    const stock = await models.Stock.create({
-      stock: 0,
-      backorder: 0,
-    });
     const product = await models.Product.create({
       title: req.body.title,
       description: req.body.description,
       pieces: req.body.pieces,
       price: req.body.price,
       unit: req.body.unit,
-      StockId: stock.id,
       CategoryId: req.body.CategoryId,
       SupplierId: req.body.SupplierId,
     });
@@ -65,6 +60,7 @@ router.put("/:id", async function (req, res, next) {
         pieces: req.body.pieces ? req.body.pieces : null,
         price: req.body.price ? req.body.price : null,
         unit: req.body.unit ? req.body.unit : null,
+        stock: req.body.stock ? req.body.stock : null,
         CategoryId: req.body.CategoryId ? req.body.CategoryId : null,
         SupplierId: req.body.SupplierId ? req.body.SupplierId : null,
       },

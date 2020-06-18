@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
       pieces: DataTypes.INTEGER,
       price: DataTypes.REAL,
       unit: DataTypes.STRING,
+      stock: DataTypes.INTEGER,
     },
     {}
   );
@@ -17,12 +18,6 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: "SET NULL",
       foreignKey: {
         allowNull: true,
-      },
-    });
-    Product.belongsTo(models.Stock, {
-      onDelete: "CASCADE",
-      foreignKey: {
-        allowNull: false,
       },
     });
     Product.belongsTo(models.Supplier, {

@@ -23,21 +23,15 @@ module.exports = {
       unit: {
         type: DataType.STRING,
       },
+      stock: {
+        type: DataType.INTERGER,
+      },
       categoryId: {
         type: Sequelize.INTEGER,
         onDelete: "SET NULL",
         allowNull: true,
         references: {
           model: "Category",
-          key: "id",
-        },
-      },
-      categoryId: {
-        type: Sequelize.INTEGER,
-        onDelete: "CASCADE",
-        allowNull: false,
-        references: {
-          model: "Stock",
           key: "id",
         },
       },
