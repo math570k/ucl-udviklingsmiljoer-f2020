@@ -2,15 +2,15 @@
 
 Dette repository består af en REST API bygget med Node.js, Express & Sequelize.
 
+## Database Konfiguration
+
+Databasen kan konfigureres efter Sequelize' indstiller i filen `config/config.json`. [Se Sequelize' Documentation](https://sequelize.org/master/manual/migrations.html) for hvordan man sætter databasen op.
+Flere forskellige databaser kan benyttes - men bruger som standard Postgres.
+
 ## Installation
 
 Kør `npm install` i roden af projektet for at installere de nødvendige NPM moduler. Kør derefter `npm run dev` for at køre API'en i udviklingstilstand.
 Der forfindes også noget test-data der kan indsættes med denne kommando: `npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all`. Kør den **efter** `npm run dev` er blevet kørt første gang.
-
-## Database Configuration
-
-Databasen kan konfigureres efter Sequelize' indstiller i filen `config/config.json`. [Se Sequelize' Documentation](https://sequelize.org/master/manual/migrations.html) for hvordan man sætter databasen op.
-Flere forskellige databaser kan benyttes - men bruger som standard Postgres.
 
 ## Tilgængelige API Routes
 
