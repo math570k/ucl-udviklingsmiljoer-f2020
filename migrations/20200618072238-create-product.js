@@ -15,32 +15,32 @@ module.exports = {
         type: Sequelize.STRING,
       },
       pieces: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
       },
       price: {
-        type: DataType.REAL,
+        type: Sequelize.REAL,
       },
       unit: {
-        type: DataType.STRING,
+        type: Sequelize.STRING,
       },
       stock: {
-        type: DataType.INTERGER,
+        type: Sequelize.INTEGER,
       },
-      categoryId: {
+      CategoryId: {
         type: Sequelize.INTEGER,
         onDelete: "SET NULL",
         allowNull: true,
         references: {
-          model: "Category",
+          model: "Categories",
           key: "id",
         },
       },
-      supplierId: {
+      SupplierId: {
         type: Sequelize.INTEGER,
         onDelete: "SET NULL",
         allowNull: true,
         references: {
-          model: "Supplier",
+          model: "Suppliers",
           key: "id",
         },
       },

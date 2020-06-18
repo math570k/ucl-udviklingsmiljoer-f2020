@@ -1,0 +1,65 @@
+# Udviklingsmiljøer Eksamen
+Dette repository består af en REST API bygget med Node.js, Express & Sequelize.
+
+## Installation
+Kør `npm install` i roden af projektet for at installere de nødvendige NPM moduler. Kør derefter `npm run dev` for at køre API'en i udviklingstilstand.
+Der forfindes også noget test-data der kan indsættes med denne kommando: `npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all`. Kør den **efter** `npm run dev` er blevet kørt første gang.
+
+## Database Configuration
+Databasen kan konfigureres efter Sequelize' indstiller i filen `config/config.json`. [Se Sequelize' Documentation](https://sequelize.org/master/manual/migrations.html) for hvordan man sætter databasen op.
+Flere forskellige databaser kan benyttes - men bruger som standard Postgres.
+
+## Tilgængelige API Routes
+#### Leverandører
+**GET**   `/api/suppliers`
+*Liste med alle leverandører*
+
+**GET**   `/api/suppliers/:id`
+*Find 1 Leverandør med ID*
+
+**GET**   `/api/suppliers/:id/products`
+*Find alle leverandørens produkter*
+
+**POST**  `/api/suppliers`
+* Opret Leverandør *
+
+**PUT**   `/api/suppliers/:id`
+* Opdater Leverandør med ID *
+
+**DELETE**   `/api/suppliers/:id`
+* Slet Leverandør med ID *
+
+#### Kategorier
+**GET**   `/api/categories`
+*Liste med alle kategorier*
+
+**GET**   `/api/categories/:id`
+*Find 1 kategori med ID*
+
+**GET**   `/api/categories/:id/products`
+*Find alle kategoriens produkter*
+
+**POST**  `/api/categories`
+* Opret Kategori *
+
+**PUT**   `/api/categories/:id`
+* Opdater Kategori med ID *
+
+**PUT**   `/api/categories/:id`
+* Slet Kategori med ID *
+
+#### Produkter
+**GET**   `/api/products`
+*Liste med alle produkter*
+
+**GET**   `/api/products/:id`
+*Find 1 produkt med ID*
+
+**POST**  `/api/products`
+* Opret Produkt *
+
+**PUT**   `/api/products/:id`
+* Opdater Produkt med ID *
+
+**PUT**   `/api/products/:id`
+* Slet Produkt med ID *
