@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "noeka",
+    "password": null,
+    "database": "ucl_udviklingsmiljoer_f2020_development",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "noeka",
+    "password": null,
+    "database": "ucl_udviklingsmiljoer_f2020_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "noeka",
+    "password": null,
+    "database": "ucl_udviklingsmiljoer_f2020_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}
